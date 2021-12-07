@@ -1,7 +1,11 @@
-import utils 
-from scene import TextNode
+from build_scenes import build_scene
 
 
-test_scene = TextNode('You wake up in a cave. You do not know who you are')
-test_scene.play_text()
-
+def main():
+    branch = build_scene()
+    branch.play_all()
+    
+    
+if __name__ == "__main__":
+    main()
+    

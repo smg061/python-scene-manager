@@ -1,6 +1,6 @@
 import time 
 
-def slow_space_print(text, interval=0.1):
+def slow_space_print(text:str, use_spaces:bool = True, interval:float=0.1):
     """Slowly display text with spaces in between each letter and
     lowercase letter i's."""
     for character in text:
@@ -9,9 +9,8 @@ def slow_space_print(text, interval=0.1):
             print('i ', end='', flush=True)
         else:
             # All other characters are displayed normally:
-            print(character + ' ', end='', flush=True)
+            spacer = ' ' if use_spaces else ''
+            print(character + spacer, end='', flush=True)
         time.sleep(interval)
     print()  # Print two newlines at the end.
     print()
-    
-
